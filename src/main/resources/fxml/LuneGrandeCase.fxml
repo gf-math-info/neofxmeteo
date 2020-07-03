@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="NeoFxMeteo.vue.map.LuneGrandeCase" fx:id="grandeCaseVBox">
+    <Label fx:id="momentLabel"/>
+    <ImageView fx:id="iconeImageView" fitWidth="150" fitHeight="150"/>
+    <Label fx:id="desLuneLabel"/>
+
+</VBox>

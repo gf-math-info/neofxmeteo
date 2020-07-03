@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.Label?>
+<HBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="NeoFxMeteo.vue.map.LunePetiteCase"
+      fx:id="petiteCaseHBox">
+    <ImageView fx:id="iconeImageView" fitHeight="50" fitWidth="50"/>
+    <Label fx:id="momentLabel"/>
+
+</HBox>

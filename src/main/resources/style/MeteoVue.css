@@ -1,0 +1,233 @@
+.root {
+    couleur_noir: #272932;
+    couleur_bleu_fond: #4c92c8;
+    couleur_orange: #c04600;
+    couleur_blanc: #e7ecef;
+    couleur_noir: #272932;
+    couleur_noir_bleu: #2a374e;
+    couleur_noir_accent: #090A0A;
+}
+
+* {
+	-fx-border-width: 0;
+}
+
+.scroll-bar:horizontal {
+	-fx-pref-height: 15;
+	-fx-background-color: transparent;
+}
+
+.scroll-bar:vertical {
+	-fx-pref-width: 12;
+	-fx-background-color: transparent;
+}
+
+.increment-button, .decrement-button {
+	-fx-pref-height: 0;
+	-fx-pref-width: 0;
+	visibility: hidden;
+}
+
+.increment-arrow, .decrement-arrow {
+	visibility: hidden;
+}
+
+/*Nord*/
+.bar-outil {
+	-fx-pref-height: 50;
+	-fx-spacing: 10;
+	-fx-padding: 0 5;
+	-fx-alignment: center;
+	-fx-background-color: couleur_orange;
+}
+
+#hBox {
+	-fx-alignment: center;
+}
+
+#nomVilleLabel {
+	-fx-background-color: couleur_blanc;
+	-fx-background-radius: 20 0 0 20;
+	-fx-pref-height: 35;
+	-fx-font-size: 16;
+	-fx-padding: 5;
+}
+
+#retirerFavoriButton {
+	-fx-background-color: couleur_blanc;
+	-fx-background-radius: 0 20 20 0;
+	-fx-pref-height: 34;
+	-fx-font-size: 16;
+}
+
+#favoriHBox {
+	-fx-spacing: 10;
+}
+
+.recherche-hbox {
+	-fx-alignment: center;
+}
+
+#rechercheTextField {
+	-fx-background-color: couleur_blanc;
+	-fx-background-radius: 20 0 0 20;
+	-fx-pref-height: 35;
+	-fx-font-size: 16;
+}
+
+#rechercheButton {
+	-fx-background-color: couleur_blanc;
+	-fx-background-radius: 0 20 20 0;
+	-fx-pref-height: 34;
+}
+
+.bar-outil-button {
+	-fx-background-radius: 20;
+	-fx-background-color: couleur_noir;
+	-fx-font-size: 16;
+	-fx-text-fill: couleur_blanc;
+	-fx-text-alignment: center;
+}
+
+.bar-outil .icone-button {
+	-fx-background-color: transparent;
+}
+
+/*Centre*/
+#conteneurPrincipal {
+	-fx-spacing: 10;
+	-fx-background-color: linear-gradient(to bottom, #b8c1e1, #4c92c8);
+}
+
+/*Style des cases contenant les données de la météo*/
+.meteo-vbox {
+	-fx-alignment: center-left;
+	-fx-padding: 10;
+}
+
+.moment-label {
+	-fx-font-size: 18;
+	-fx-font-weight: bold;
+}
+
+.meteo-hbox {
+	-fx-alignment: center;
+}
+
+.info-vbox {
+	-fx-alignment: center-left;
+	-fx-spacing: 5;
+}
+
+.info-label {
+	-fx-font-size: 16;
+	-fx-text-alignment: center;
+}
+
+.temp-label {
+	-fx-font-weight: bold;
+}
+/*Fin du style des cases contenant les données de la météo*/
+
+/*Style de la case de la météo actuelle*/
+#meteoActuelleVBox {
+	-fx-padding: 30;
+	-fx-alignment: center;
+}
+
+#meteoActuelleHBox {
+	-fx-padding: 0 20;
+	-fx-alignment: center;
+	-fx-spacing: 40;
+}
+
+#villeLabel {
+	-fx-font-size: 35;
+	-fx-font-weight: bold;
+}
+
+.info-meteo-actuelle-label {
+	-fx-font-size: 20;
+}
+
+#desMeteoLabel {
+	-fx-text-alignment: center;
+	-fx-font-size: 26;
+}
+/*Fin du style de la case de la météo actuelle*/
+
+.titre-label {
+	-fx-font-size: 26;
+}
+
+.conteneur-vbox {
+	-fx-padding: 10 0;
+	-fx-spacing: 5;
+}
+
+.conteneur-vbox > .scroll-pane {
+	-fx-pref-height: 225;
+	-fx-background-color: transparent;
+}
+
+.conteneur-vbox > .scroll-pane > .viewport {
+	-fx-background-color: transparent;
+}
+
+.conteneur-vbox .thumb {
+	-fx-background-color: #4c92c8;
+}
+
+/*Style de la section des données des phases lunaires.*/
+#conteneurLuneHBox {
+	-fx-alignment: center;
+	-fx-spacing: 200;
+}
+
+#luneActuelleHBox, #luneActuelleVBox, #phasesHBox, #grandeCaseVBox, #petitesPhasesVBox {
+	-fx-alignment: center;
+	-fx-spacing: 5;
+}
+
+#petiteCaseHBox {
+	-fx-alignment: center-left;
+	-fx-spacing: 5;
+}
+
+#luneActuelleLabel, #momentLabel {
+	-fx-font-size: 20;
+}
+
+#pourcentageLabel {
+	-fx-font-size: 18;
+}
+
+#desLuneLabel {
+	-fx-font-size: 18;
+}
+
+#grandesPhasesHBox {
+	-fx-spacing: 10;
+}
+
+/*Sud*/
+#infoFournisseurHBox {
+	-fx-alignment: center;
+	-fx-background-color: couleur_noir;
+}
+
+#infoFournisseurLabel {
+	-fx-font-size: 16;
+	-fx-text-fill: couleur_blanc;
+	-fx-text-alignment: center;
+}
+
+#attenteVBox {
+	-fx-alignment: center;
+	-fx-spacing: 20;
+	-fx-background-color: linear-gradient(to bottom, #b8c1e1, #4c92c8);
+}
+
+#attenteVBox > .label {
+	-fx-font-size: 26;
+}

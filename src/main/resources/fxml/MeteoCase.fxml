@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="NeoFxMeteo.vue.map.MeteoCase"
+      styleClass="meteo-vbox">
+    <Label fx:id="momentLabel" styleClass="moment-label"/>
+    <HBox>
+        <ImageView fx:id="iconeImageView" fitWidth="150" fitHeight="150"/>
+        <VBox styleClass="info-vbox">
+            <Label fx:id="tempLabel" styleClass="info-label, temp-label"/>
+            <Label fx:id="precLabel" styleClass="info-label"/>
+            <Label fx:id="ventLabel" styleClass="info-label"/>
+        </VBox>
+    </HBox>
+
+</VBox>

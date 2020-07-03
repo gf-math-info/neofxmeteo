@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import NeoFxMeteo.vue.RechercheTextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="NeoFxMeteo.vue.map.MeteoVue"
+            fx:id="borderPane">
+
+    <top>
+        <VBox>
+            <HBox styleClass="bar-outil">
+                <!--Dans la barre d'outils-->
+                <Button fx:id="favoriButton" styleClass="icone-button">
+                    <graphic>
+                        <ImageView>
+                            <Image url="/imgs/etoile.png" requestedHeight="35" requestedWidth="35" smooth="true"
+                                   preserveRatio="true"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+
+                <HBox styleClass="recherche-hbox">
+                    <RechercheTextField fx:id="rechercheTextField"/>
+                    <Button fx:id="rechercheButton">
+                        <graphic>
+                            <ImageView>
+                                <Image url="/imgs/recherche.png" requestedWidth="20" requestedHeight="20"
+                                       smooth="true" preserveRatio="true"/>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                </HBox>
+
+                <HBox fx:id="favoriHBox"/>
+
+                <HBox HBox.hgrow="ALWAYS"/>
+
+                <Button fx:id="positionButton" styleClass="icone-button">
+                    <graphic>
+                        <ImageView>
+                            <Image url="/imgs/position.png" requestedWidth="35" requestedHeight="35" smooth="true"
+                                   preserveRatio="true"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+
+                <Button fx:id="actualiserButton" styleClass="icone-button">
+                    <graphic>
+                        <ImageView>
+                            <Image url="/imgs/actu_icone.png" requestedWidth="35" requestedHeight="35"
+                                   smooth="true" preserveRatio="true"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+
+                <Button fx:id="aProposButton" styleClass="bar-outil-button">À propos</Button>
+
+                <Button fx:id="aideButton" styleClass="bar-outil-button">Aide</Button>
+            </HBox>
+
+            <Canvas fx:id="alerteCanvas"/>
+        </VBox>
+    </top>
+
+    <center>
+        <ScrollPane fx:id="scrollPane" fitToWidth="true">
+            <VBox fx:id="conteneurPrincipal">
+
+                <HBox fx:id="meteoActuelleHBox">
+                    <!--Partie contenant la météo actuelle et la météo pour la journée.-->
+                    <VBox fx:id="meteoActuelleVBox">
+                        <Label fx:id="villeLabel"/>
+                        <HBox styleClass="meteo-hbox">
+                            <ImageView fx:id="meteoImageView" fitHeight="200" fitWidth="200"/>
+                            <VBox styleClass="info-vbox">
+                                <Label fx:id="tempLabel" styleClass="info-meteo-actuelle-label, temp-label"/>
+                                <Label fx:id="tempResLabel" styleClass="info-meteo-actuelle-label"/>
+                                <Label fx:id="ventLabel" styleClass="info-meteo-actuelle-label"/>
+                            </VBox>
+                        </HBox>
+                        <Label fx:id="desMeteoLabel"/>
+                    </VBox>
+                    <HBox fx:id="meteoJourneeHBox"/>
+                </HBox>
+
+                <VBox styleClass="conteneur-vbox">
+                    <Label styleClass="titre-label">Prochaines heures</Label>
+                    <ScrollPane fitToHeight="true">
+                        <HBox fx:id="meteoHeuresHBox"/>
+                    </ScrollPane>
+                </VBox>
+
+                <VBox styleClass="conteneur-vbox">
+                    <Label styleClass="titre-label">Prochains jours</Label>
+                    <ScrollPane fitToHeight="true">
+                        <HBox fx:id="meteoJoursHBox"/>
+                    </ScrollPane>
+                </VBox>
+
+                <VBox styleClass="conteneur-vbox">
+                    <Label styleClass="titre-label">Phases lunaires</Label>
+                    <HBox fx:id="conteneurLuneHBox">
+                        <VBox fx:id="luneActuelleVBox">
+                            <Label fx:id="luneActuelleLabel">Lune actuelle</Label>
+                            <HBox fx:id="luneActuelleHBox">
+                                <ImageView fx:id="luneImageView" fitHeight="150" fitWidth="150"/>
+                                <Label fx:id="pourcentageLabel"/>
+                            </HBox>
+                            <Label fx:id="desLuneLabel"/>
+                        </VBox>
+                        <HBox fx:id="phasesHBox">
+                            <HBox fx:id="grandesPhasesHBox"/>
+                            <VBox fx:id="petitesPhasesVBox"/>
+                        </HBox>
+                    </HBox>
+                </VBox>
+
+            </VBox>
+        </ScrollPane>
+    </center>
+
+    <bottom>
+        <HBox fx:id="infoFournisseurHBox">
+            <Label fx:id="infoFournisseurLabel"/>
+        </HBox>
+    </bottom>
+</BorderPane>
